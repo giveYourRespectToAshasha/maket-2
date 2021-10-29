@@ -25,3 +25,11 @@ $('.wrapper .footer .comments .right-arrow').click(function() {
 	let lastItem3 = $('.wrapper .footer .comments .dots .dottes .cent .dot').eq(8).detach();
 	$('.wrapper .footer .comments .dots .dottes .cent').prepend(lastItem3);
 });
+// hamburger menu //
+
+$('.wrapper .header .menu').click(function() {
+
+	if (window.innerWidth > 960) {return}
+	 else if ($('.wrapper .header .menu .item').css('display') == 'block') {$('.wrapper .header .menu .item').css('display', 'none'); $('.wrapper .header .menu').toggleClass('active-burger');}
+	else {$('.wrapper .header .menu .item').css('display', 'block');	$('.wrapper .header .menu').toggleClass('active-burger');	}
+	});
